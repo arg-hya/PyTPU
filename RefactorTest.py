@@ -23,7 +23,7 @@ def tracing_mem():
 if __name__ == "__main__":
     tracing_start()
     start = time.time()
-    migrator = TPUMigrator("misc.py", level = logging.INFO)
+    migrator = TPUMigrator("test_source_code.py", level = logging.INFO)
     migrator.execute(comments=True, reformatter=True, optimize = True, genTestCases = False, PYNGUINPATH="")
     end = time.time()
     print("time elapsed {} milli seconds".format((end - start) * 1000))
